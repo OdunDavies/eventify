@@ -1,0 +1,41 @@
+{
+  "name": "@eventtix/email",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./templates": {
+      "import": "./dist/templates.mjs",
+      "require": "./dist/templates.js",
+      "types": "./dist/templates.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "dependencies": {
+    "@react-email/components": "^0.0.22",
+    "resend": "^3.4.0",
+    "react-email": "^2.1.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@eventtix/tsconfig": "workspace:*",
+    "@types/node": "^20.12.0",
+    "@types/react": "^18.3.0",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@eventtix/config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "dependencies": {
+    "zod": "^3.23.0",
+    "@t3-oss/env-nextjs": "^0.10.0"
+  },
+  "devDependencies": {
+    "@eventtix/tsconfig": "workspace:*",
+    "@types/node": "^20.12.0",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.0"
+  }
+}
